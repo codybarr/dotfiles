@@ -7,5 +7,5 @@ all my dotfiles
 install homebrew - https://brew.sh/, then:
 
 ```
-brew bundle <insert remote url>
+curl -L https://raw.githubusercontent.com/codybarr/dotfiles/master/.brewfile | brew bundle install
 ```
