@@ -1,0 +1,38 @@
+# env stuff
+brew "zsh-nvm"
+brew "zsh-autosuggestions"
+brew "bat"
+
+# coding
+tap  "oven-sh/bun"
+brew "bun"
+brew "nvm"
+brew "asdf"
+
+# apps
+cask "1password"
+cask "iterm2"
+cask "visual-studio-code"
+cask "zed"
+cask "firefox"
+cask "brave-browser"
+cask "rectangle"
+cask "signal"
+cask "vlc"
+cask "alfred"
+cask "slack"
+cask "zoom"
+cask "steam"
+cask "appcleaner"
+cask "battle-net"
+cask "cloudflare-warp"
+cask "calibre"
+
+# fonts
+tap  "homebrew/cask-fonts"
+cask "font-inter"
+cask "font-fira-code-nerd-font"
+cask "font-hack-nerd-font"
+
+# mac app store apps - might not need!
+# brew "mas"
