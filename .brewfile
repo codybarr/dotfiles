@@ -26,6 +26,7 @@ cask "appcleaner"
 cask "battle-net"
 cask "cloudflare-warp"
 cask "calibre"
+cask "monitorcontrol"
 
 # fonts
 tap  "homebrew/cask-fonts"
