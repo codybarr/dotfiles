@@ -1,7 +1,7 @@
 HOMEBREW_BUNDLE_FILE="~/.brewfile"
 
 # oh-my-zsh plugins
-plugins=(zsh-nvm zsh-autosuggestions asdf)
+plugins=(zsh-autosuggestions asdf)
 
 # custom aliases
 alias cat="bat"

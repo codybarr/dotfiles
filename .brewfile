@@ -1,5 +1,4 @@
 # env stuff
-brew "zsh-nvm"
 brew "zsh-autosuggestions"
 brew "bat"
 
