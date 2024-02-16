@@ -9,3 +9,5 @@ alias pretty="prettier --single-quote --use-tabs --tab-width 4 --no-semi --check
 alias ls="ls -alh"
 alias vim="nvim"
 alias cd="z"
+
+eval "$(zoxide init zsh)"
