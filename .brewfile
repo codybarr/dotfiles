@@ -1,6 +1,7 @@
 # env stuff
 brew "zsh-autosuggestions"
 brew "bat"
+brew "zoxide"
 
 # coding
 tap  "oven-sh/bun"
