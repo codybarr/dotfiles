@@ -9,6 +9,10 @@ brew "bun"
 brew "nvm"
 brew "asdf"
 
+# cli
+brew "jq"
+brew "htmlq"
+
 # apps
 cask "1password"
 cask "iterm2"
