@@ -34,7 +34,6 @@ cask "calibre"
 cask "monitorcontrol"
 
 # fonts
-tap  "homebrew/cask-fonts"
 cask "font-inter"
 cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
