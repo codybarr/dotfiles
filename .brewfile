@@ -1,17 +1,19 @@
 # env stuff
-brew "zsh-autosuggestions"
-brew "bat"
 brew "zoxide"
+brew "zsh-autosuggestions"
 
 # coding
 tap  "oven-sh/bun"
 brew "bun"
-brew "nvm"
 brew "asdf"
+brew "deno"
+brew "nvm"
 
 # cli
+brew "bat"
 brew "jq"
 brew "htmlq"
+brew "gifski"
 
 # apps
 cask "alfred"
@@ -40,4 +42,5 @@ cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 
 # mac app store apps - might not need!
-# brew "mas"
+brew "mas"
+mas "Gifski", id: 1351639930
