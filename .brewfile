@@ -11,23 +11,30 @@ brew "nvm"
 
 # cli
 brew "bat"
-brew "jq"
-brew "htmlq"
 brew "gifski"
+brew "htmlq"
+brew "jq"
+brew "ripgrep"
+
+# gui
+tap "FelixKratz/formulae"
+brew "sketchybar"
+brew "borders"
+cask "nikitabobko/tap/aerospace"
 
 # apps
-cask "alfred"
 cask "appcleaner"
 cask "battle-net"
 cask "brave-browser"
-cask "calibre"
 cask "cloudflare-warp"
+cask "cursor"
 cask "firefox"
 cask "fork"
 cask "iterm2"
 cask "monitorcontrol"
 cask "obsidian"
 cask "openemu"
+cask "raycast"
 cask "rectangle"
 cask "retroarch"
 cask "signal"
@@ -42,6 +49,8 @@ cask "zoom"
 cask "font-inter"
 cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
+cask "font-sf-pro"
+cask "sf-symbols"
 
 # mac app store apps - might not need!
 brew "mas"
