@@ -8,6 +8,7 @@ brew "bun"
 brew "asdf"
 brew "deno"
 brew "nvm"
+brew "lazygit"
 
 # cli
 brew "bat"
@@ -24,6 +25,7 @@ cask "nikitabobko/tap/aerospace"
 
 # apps
 cask "appcleaner"
+cask "alfred"
 cask "battle-net"
 cask "brave-browser"
 cask "cloudflare-warp"
@@ -34,7 +36,6 @@ cask "iterm2"
 cask "monitorcontrol"
 cask "obsidian"
 cask "openemu"
-cask "raycast"
 cask "rectangle"
 cask "retroarch"
 cask "signal"
