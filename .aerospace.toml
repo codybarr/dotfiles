@@ -68,7 +68,9 @@ inner.horizontal = 10
 inner.vertical =   10
 outer.left =       10
 outer.bottom =     10
-outer.top =        22
+# Reserve SketchyBar's 45-point height plus a 10-point visual gap on the
+# external monitor. The fallback preserves the laptop display's existing inset.
+outer.top =        [{ monitor."PG27UCDM" = 55 }, 22]
 outer.right =      10
 
 # 'main' binding mode declaration
