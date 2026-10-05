@@ -1,0 +1,27 @@
+theme = "Blacksmith"
+
+[editor]
+auto-format = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+
+[keys.normal]
+"Cmd-/" = "toggle_comments"
+"S-j" = "page_cursor_half_down"
+"S-k" = "page_cursor_half_up"
+
+[editor.cursor-shape]
+insert  = "bar"
+
+# copy relative path of current buffer
+[keys.normal.space.y]
+p = ":sh python3 -c \"import os; print(os.path.relpath('%{buffer_name}'), end='')\" | pbcopy"
+
+# git blame
+[keys.normal.space]
+B = ":sh git blame -L %{cursor_line},+1 %{buffer_name}"
