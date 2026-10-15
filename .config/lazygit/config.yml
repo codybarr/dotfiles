@@ -1,0 +1,41 @@
+gui:
+  authorColors:
+    "Cody Barr": "#4CC9FF"
+  showFileTree: false
+  theme:
+    activeBorderColor:
+      - "#FFC400"
+      - "bold"
+    inactiveBorderColor:
+      - "#434343"
+    searchingActiveBorderColor:
+      - "#4CC9FF"
+      - "bold"
+    optionsTextColor:
+      - "#66A3FF"
+    selectedLineBgColor:
+      - "#9A6200"
+    inactiveViewSelectedLineBgColor:
+      - "#333331"
+    cherryPickedCommitFgColor:
+      - "#191918"
+    cherryPickedCommitBgColor:
+      - "#FFAA00"
+    markedBaseCommitFgColor:
+      - "#191918"
+    markedBaseCommitBgColor:
+      - "#FFE14D"
+    unstagedChangesColor:
+      - "#FFB703"
+    defaultFgColor:
+      - "#FFE14D"
+git:
+  diffRenderers:
+    - name: delta inline
+      command: delta --dark --paging=never
+    - name: delta side-by-side
+      command: delta --dark --paging=never --side-by-side
+    - name: default
+      type: rawGit
+services:
+  "gitlab.economicmodeling.com": "gitlab:gitlab.economicmodeling.com"

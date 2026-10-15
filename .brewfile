@@ -9,6 +9,7 @@ brew "asdf"
 brew "deno"
 brew "nvm"
 brew "lazygit"
+brew "git-delta"
 
 # cli
 brew "bat"

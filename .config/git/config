@@ -1,0 +1,17 @@
+# Blue additions / orange deletions, shared by Git and Delta.
+[color "diff"]
+	old = "#E69F00"
+	new = "#56B4E9"
+	oldMoved = "#E69F00"
+	newMoved = "#56B4E9"
+	oldMovedAlternative = "#E69F00"
+	newMovedAlternative = "#56B4E9"
+
+[delta]
+	minus-style = syntax "#3b2b13"
+	minus-emph-style = syntax bold "#684a1b"
+	plus-style = syntax "#173347"
+	plus-emph-style = syntax bold "#245574"
+	line-numbers-minus-style = "#E69F00"
+	line-numbers-plus-style = "#56B4E9"
+	keep-plus-minus-markers = true
