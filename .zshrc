@@ -1,7 +1,8 @@
-HOMEBREW_BUNDLE_FILE="~/.brewfile"
-
 # oh-my-zsh plugins
-plugins=(zsh-autosuggestions asdf)
+plugins=(zsh-autosuggestions)
+
+# Runtime/tool management replaces asdf and nvm.
+eval "$(mise activate zsh)"
 
 # custom aliases
 alias cat="bat"

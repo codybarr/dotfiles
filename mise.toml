@@ -1,0 +1,97 @@
+# macOS workstation setup. Preview with: mise bootstrap --dry-run
+# Native mise backends replace Homebrew runtimes/CLIs and asdf/nvm.
+[tools]
+# Required to evaluate third-party casks during bootstrap, including dry runs.
+ruby = "3"
+bun = "latest"
+deno = "latest"
+node = "lts"
+"aqua:sharkdp/bat" = "latest"
+"aqua:dandavison/delta" = "latest"
+"aqua:helix-editor/helix" = "latest"
+"aqua:mgdm/htmlq" = "latest"
+"aqua:jqlang/jq" = "latest"
+"aqua:jesseduffield/lazygit" = "latest"
+"aqua:BurntSushi/ripgrep" = "latest"
+"aqua:ajeetdsouza/zoxide" = "latest"
+
+[bootstrap.packages]
+# Remaining formulas have no equivalent prebuilt tool in the mise registry.
+"brew:zsh-autosuggestions" = { os = "macos" }
+
+# Window management
+"brew:FelixKratz/formulae/sketchybar" = { os = "macos" }
+# AeroSpace is managed separately: the installed aerospace-dev is a local build.
+# Do not install stable aerospace alongside it (the casks conflict).
+
+# Apps
+# Tinycast requires Apple Silicon and macOS 26+.
+"brew-cask:abue-ammar/tinycast/tinycast" = { os = "macos" }
+"brew-cask:appcleaner" = { os = "macos" }
+"brew-cask:battle-net" = { os = "macos" }
+"brew-cask:brave-browser" = { os = "macos" }
+"brew-cask:cloudflare-warp" = { os = "macos" }
+"brew-cask:cursor" = { os = "macos" }
+"brew-cask:firefox" = { os = "macos" }
+"brew-cask:fork" = { os = "macos" }
+"brew-cask:ghostty" = { os = "macos" }
+"brew-cask:monitorcontrol" = { os = "macos" }
+"brew-cask:obsidian" = { os = "macos" }
+"brew-cask:openemu" = { os = "macos" }
+"brew-cask:rectangle" = { os = "macos" }
+"brew-cask:retroarch" = { os = "macos" }
+"brew-cask:signal" = { os = "macos" }
+"brew-cask:slack" = { os = "macos" }
+"brew-cask:steam" = { os = "macos" }
+"brew-cask:vlc" = { os = "macos" }
+"brew-cask:zed" = { os = "macos" }
+"brew-cask:zoom" = { os = "macos" }
+
+# Fonts
+"brew-cask:font-inter" = { os = "macos" }
+"brew-cask:font-fira-code-nerd-font" = { os = "macos" }
+"brew-cask:font-hack-nerd-font" = { os = "macos" }
+"brew-cask:font-sf-pro" = { os = "macos" }
+"brew-cask:sf-symbols" = { os = "macos" }
+
+[bootstrap.brew]
+# Preserve existing app bundles and their privacy permissions where possible.
+adopt = true
+
+[bootstrap.macos.finder]
+preferred_view_style = "list"
+show_pathbar = true
+show_status_bar = true
+
+[bootstrap.macos.defaults]
+"com.apple.screencapture" = { type = "png", "disable-shadow" = true }
+"NSGlobalDomain" = { "com.apple.swipescrolldirection" = false }
+"com.apple.AppleMultitouchMouse" = { MouseButtonMode = "TwoButton" }
+"com.apple.driver.AppleBluetoothMultitouch.mouse" = { MouseButtonMode = "TwoButton" }
+"com.apple.AppleMultitouchTrackpad" = { TrackpadCornerSecondaryClick = 2 }
+"com.apple.driver.AppleBluetoothMultitouch.trackpad" = { TrackpadCornerSecondaryClick = 2 }
+
+# Disable only these Spotlight shortcuts, preserving other shortcut settings.
+[[bootstrap.macos.defaults_entries]]
+domain = "com.apple.symbolichotkeys"
+key = "AppleSymbolicHotKeys"
+path = ["64", "enabled"]
+value = false
+
+[[bootstrap.macos.defaults_entries]]
+domain = "com.apple.symbolichotkeys"
+key = "AppleSymbolicHotKeys"
+path = ["65", "enabled"]
+value = false
+
+# Persistent Caps Lock -> Escape mapping for all keyboards.
+[[bootstrap.macos.defaults_entries]]
+domain = "NSGlobalDomain"
+key = "com.apple.keyboard.modifiermapping.0-0-0"
+host = "current"
+value = [{ HIDKeyboardModifierMappingSrc = 30064771129, HIDKeyboardModifierMappingDst = 30064771113 }]
+
+[tasks.bootstrap]
+description = "Apply remaining macOS settings after package installation and defaults"
+dir = "{{ config_root }}"
+run = 'if [ "$(uname -s)" = Darwin ]; then bash ./scripts/macos-settings.sh; fi'
