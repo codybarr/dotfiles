@@ -1,0 +1,15 @@
+background-opacity = .9
+background-blur = 15
+font-size = 16
+font-family = Hack Nerd Font Mono
+window-padding-y = 10
+window-padding-x = 10
+
+# background = #212121
+background = #101218
+
+# Integrated tabs match the cyberpunk terminal background (new windows only).
+macos-titlebar-style = native
+
+tab-inherit-working-directory = true
+keybind = cmd+k=text:\x0c
