@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+file=$1
+line=$2
+cd -- "$(dirname -- "$file")"
+file=$(basename -- "$file")
+
+git blame -L "$line,+1" -- "$file"
+blame=$(git blame --porcelain -L "$line,+1" -- "$file")
+commit=${blame%% *}
+
+# Uncommitted lines have no commit message.
+case "$commit" in
+    *[!0]*)
+        printf '\n'
+        git show -s --format=%B "$commit"
+        ;;
+esac
